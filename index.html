@@ -9,27 +9,68 @@
 
     <!-- Including the Font Awesome CSS library for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        /* Fullscreen background video */
+        #bgVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+        }
+
+        /* Smooth hover animation for navbar */
+        .topnav a {
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .topnav a:hover {
+            background-color: lightblue;
+            color: black;
+        }
+
+        /* Styling the benefits table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
 
+    <!-- Background Video -->
+    <video autoplay muted loop id="bgVideo">
+        <source src="img/background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
     <!-- Navigation bar -->
     <div class="topnav" id="myTopnav">
         <a href="Lab1.html">Lab 1</a>
-
-        <!-- Active link pointing to the index.html page -->
         <a class="active" href="index.html">Abstract</a>
-
-        <!-- Links to other sections -->
         <a href="section1.html">Section 1</a>
         <a href="section2.html">Section 2</a>
         <a href="section3.html">Section 3</a>
-
-        <!-- Additional links -->
         <a href="see_also.html">See Also</a>
         <a href="references.html">References</a>
 
-        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links on smaller screens -->
+        <!-- "Hamburger menu" / "Bar icon" for smaller screens -->
         <a href="javascript:void(0);" class="icon">
             <i class="fa fa-bars"></i>
         </a>
@@ -38,18 +79,37 @@
     <!-- Page content -->
     <div class="content">
         <!-- Abstract section -->
-        This is the abstract section.
-        <br>
-        <br>
-        <!-- Displaying the course cover image in a scaled size -->
-        Here is the course cover image in a scaled size:
-        <br>
+        <h2>Abstract</h2>
+        <p>This is the abstract section.</p>
+
+        <!-- Displaying the course cover image -->
+        <h3>Course Cover Image</h3>
+        <p>Here is the course cover image in a scaled size:</p>
         <img src="img/cover.jpg" style="width: 100%; height: auto;">
-        <br>
-        <br>
-        <!-- Displaying the course cover image in its original size -->
-        Here is the course cover image in its original size:
+        
+        <p>Here is the course cover image in its original size:</p>
         <img src="img/cover.jpg">
+
+        <!-- Web GIS Benefits Table -->
+        <h3>Web GIS Benefits</h3>
+        <table>
+            <tr>
+                <th>Benefit</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Real-Time Data</td>
+                <td>Allows users to access up-to-date spatial data.</td>
+            </tr>
+            <tr>
+                <td>Remote Access</td>
+                <td>Users can analyze GIS data from any location.</td>
+            </tr>
+            <tr>
+                <td>Interactive Mapping</td>
+                <td>Provides visual representation for better decision-making.</td>
+            </tr>
+        </table>
     </div>
 
     <!-- Including the main.js file for JavaScript functionality -->
